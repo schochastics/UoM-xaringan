@@ -1,0 +1,161 @@
+---
+title: "University of Manchester Power Point Slides <br> as Xaringan template"
+subtitle: "David Schoch <br> The Mitchell Centre for Social Network Analysis"
+author: ""
+date: ""
+institute: ""
+output:
+  xaringan::moon_reader:
+    includes:
+      after_body: insert-logo.html
+    css: "UoM.css"
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      slideNumberFormat: ""
+      ratio: "16:9"
+    seal: true
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(fig.path   = "figures/",
+                      fig.width  = 4.2,
+                      fig.height = 4.0,
+                      fig.retina = 2,
+                      warning = FALSE,
+                      error = FALSE,
+                      message = FALSE)
+
+theme_uom <- function () { 
+  theme_minimal(base_size=14, base_family="Arial") %+replace% 
+    theme(
+      axis.ticks = element_line(colour = "white",size=0.25),
+      text = element_text(colour = "white"),
+      axis.text  = element_text(colour = "white"),
+      panel.background  = element_rect(colour = "white",fill="#660099"),
+      plot.background = element_rect(colour = "white",fill="#660099"),
+      legend.position = "bottom",
+      legend.title = element_blank(),
+      panel.grid.minor = element_blank(),
+      panel.grid.major.x = element_line(colour = "white",size=0.25),
+      panel.grid.major.y = element_line(colour = "white",size=0.25),
+      legend.text = element_text(size = 14)
+    )
+}
+
+
+```
+
+
+# Or images should
+
+- Be uniform in size
+
+- Compliment the content
+
+- Not impact the copy area
+
+```{r side-by-side, echo=FALSE,out.width="32%"}
+knitr::include_graphics(c("figures/figure1.jpg","figures/figure2.jpg","figures/figure3.jpg"))
+```
+
+
+---
+
+# Or images should
+
+.UoM-left[
+- Be uniform in size
+
+- Compliment the content
+
+- Not impact the copy area
+]
+
+.UoM-right[
+```{r vertical, echo=FALSE,out.width="60%"}
+knitr::include_graphics(c("figures/figure1.jpg","figures/figure2.jpg","figures/figure3.jpg"))
+```
+]
+
+---
+
+# Highlighting
+
+Highlighting using the .alert[yellow] from the UoM [colour pallette](https://www.staffnet.manchester.ac.uk/brand/visual-identity/colour/)
+with css class alert.
+
+<blockquote>
+  This is a blockquote
+</blockquote>
+
+---
+
+# Code and Plot side by side 
+
+.left-code[
+```{r mtcars1-plot,fig.show="hide"}
+library(tidyverse)
+
+ggplot(mtcars, aes(mpg, disp)) +
+  geom_point(size = 3, col = "#FFCC33") + 
+  theme_uom()
+```
+This is (roughly) optimized for square plots  
+and there is not much space left for text, especially for longer code.
+]
+
+.right-plot[
+![](`r knitr::fig_chunk("mtcars1-plot", "png")`)
+]
+
+---
+
+# Three plots stacked right
+
+.UoM-left[
+```{r mtcars2-plot,fig.show="hide"}
+
+ggplot(mtcars, aes(mpg, disp)) +
+  geom_point(size = 3, col = "#FFCC33") + 
+  theme_uom()
+
+ggplot(mtcars, aes(mpg, drat)) +
+  geom_point(size = 3, col = "#FFCC33") + 
+  theme_uom()
+
+ggplot(mtcars, aes(mpg, wt)) +
+  geom_point(size = 3, col = "#FFCC33") + 
+  theme_uom()
+```
+
+]
+.UoM-right[
+```{r side-by-side2, echo=FALSE,out.width="50%"}
+knitr::include_graphics(c("figures/mtcars2-plot-1.png","figures/mtcars2-plot-2.png","figures/mtcars2-plot-3.png"))
+```
+]
+
+---
+
+# Two plots stacked right 
+
+.UoM-left[
+```{r mtcars3-plot,fig.show="hide"}
+
+ggplot(mtcars, aes(mpg, disp)) +
+  geom_point(size = 3, col = "#FFCC33") + 
+  theme_uom()
+
+ggplot(mtcars, aes(mpg, drat)) +
+  geom_point(size = 3, col = "#FFCC33") + 
+  theme_uom()
+```
+
+]
+.UoM-right[
+```{r side-by-side3, echo=FALSE,out.width="80%"}
+knitr::include_graphics(c("figures/mtcars3-plot-1.png","figures/mtcars3-plot-2.png"))
+```
+]

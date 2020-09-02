@@ -1,0 +1,169 @@
+/* styling of title slide*/
+
+.title-slide{
+  /*vertical-align:middle;*/
+  background: #660099;
+  background: -webkit-radial-gradient(center, #660099, #440066);
+  background: -moz-radial-gradient(center, #660099, #440066);
+  background: radial-gradient(ellipse at center, #660099, #440066);
+}
+
+/* title */
+.title-slide h1{
+  font-weight: bold;
+  font-family: Arial;
+  font-size: 30px;
+  text-align: left;
+  color: white;
+  border-bottom: 3px white dotted;
+  padding-bottom: 10px;
+  padding-top: 30%;
+}
+
+/* subtitle */
+.title-slide h2{
+  font-weight: 400;
+  padding-top: 20%;
+  font-family: Arial;
+  font-size: 24px;
+  text-align: left;
+  color: white;
+}
+
+/* optional: name */
+.title-slide h3:nth-of-type(1){
+  display: inline-block;
+  font-weight: 400;
+  font-family: Arial;
+  font-size: 18px;
+  text-align: right;
+  color: white;
+}
+/* optional: institute*/
+.title-slide h3:nth-of-type(2){
+  display: inline-block;
+  font-weight: 400;
+  font-family: Arial;
+  font-size: 18px;
+  color: white;
+}
+/* optional: date */
+.title-slide h3:nth-of-type(3){
+  display: inline-block;
+  font-weight: 400;
+  font-family: Arial;
+  font-size: 18px;
+  color: white;
+}
+
+.UoM-logo-white{
+  background-image: url("logos/UoM_allwhite.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 1em;
+  left: 80px;
+  width: 230px;
+  height: 200px;
+  z-index: 0;
+}
+
+.remark-slide-content{
+  background: #660099;
+  background: -webkit-radial-gradient(center, #660099, #440066);
+  background: -moz-radial-gradient(center, #660099, #440066);
+  background: radial-gradient(ellipse at center, #660099, #440066); 
+  color: white;
+  font-family: Arial;
+}
+
+.remark-slide-content h1{
+  font-size: 30px;
+  padding-top: 15%;
+}
+
+.remark-slide-content h2{
+  font-size: 24px;
+}
+
+.remark-slide-content p{
+  font-size: 24px;
+}
+
+.remark-slide-content li{
+  font-size: 24px;
+}
+
+img{
+  padding: 5px 5px 5px 5px;
+}
+
+.UoM-left {
+  float: left;
+  width: 64%;
+}
+.UoM-right {
+  position: absolute;
+  top: 1%;
+  left: 65%;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.UoM-right ~ * {
+  clear: both;
+}
+
+/* text styling */
+.alert{
+  color: #FFCC33;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+  border-bottom: 5px dotted #FFCC33;
+}
+
+a:hover {
+  background: #FFCC33;
+}
+
+blockquote {
+  font-style: italic;
+  background: #999999;
+  border-left: 10px solid #FFCC33;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+  color: #FFCC33;
+  content: "“";
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+/* code and plotting side by side  */
+
+.left-code {
+  width: 45%;
+  float: left;
+}
+.right-plot {
+  position: absolute;
+  top: 8%;
+  left: 48%;
+}
+
+.right-plot ~ * {
+  clear: both;
+}
+
+.right-plot img{
+  padding: 0;
+}
+
